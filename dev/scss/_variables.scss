@@ -1,0 +1,20 @@
+$bgColor: #3F51B5;
+$accentColor: #FF4081;
+$cardBg: white;
+
+$navigationTextColor: white;
+
+$fontColor: #3F51B5;
+
+$tablet: 768;
+$wide: 1300;
+$super-wide: 1900;
+
+$tablet-down: "(max-width: #{$tablet}px)";
+$tablet-up: "(min-width: #{$tablet+1}px)";
+
+$wide-up: "(min-width: #{$wide+1}px)";
+$wide-down: "(max-width: #{$wide}px)";
+
+$retina: "(min-width: #{$wide}px) and (-webkit-min-device-pixel-ratio: 2)";
+$wide-retina: "(min-width: #{$super-wide}px) and (-webkit-min-device-pixel-ratio: 2)";

@@ -1,0 +1,66 @@
+@import "variables";
+@import "normalize";
+@import "layout";
+@import "card";
+
+html {
+  background: $bgColor;
+  font-family: 'Roboto Mono', monospace;
+  color: $fontColor;
+  font-size: 100%;
+
+  @media #{$tablet-down} {
+    font-size: 90%;
+  }
+  @media #{$retina} {
+    font-size: 110%;
+  }
+  @media #{$wide-retina} {
+    font-size: 170%;
+  }
+}
+
+.preload * {
+  transition: none !important;
+  animation: none !important;
+}
+
+.preloader {
+  position: fixed;
+  transform: translate3d(0, 0, 0);
+
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+
+  background: #3F51B5;
+  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: translate3d;
+
+  &.loaded {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  h1 {
+    font-family: monospace;
+    position: relative;
+    top: 70%;
+    text-align: center;
+    font-size: 2.25rem;
+    color: white;
+
+    animation: blink 1.5s ease-out infinite;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

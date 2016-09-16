@@ -1,0 +1,101 @@
+.card {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: transform 0.3s, opacity 0.3s;
+
+  will-change: scale, translateX;
+
+  border-bottom: 10px solid $accentColor;
+
+  &.active {
+    z-index: 5;
+    opacity: 1;
+    transform: scale(1);
+    &.interactive {
+      animation: slide 0.5s;
+    }
+  }
+  &.visible {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+
+  position: absolute;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  padding-top: 2rem;
+
+  border-radius: 4px;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+  background: $cardBg;
+
+  @media #{$tablet-down} {
+    min-height: 100%;
+    height: auto;
+  }
+
+  &__content {
+    overflow: hidden;
+    padding: 1.25rem;
+  }
+  &__left {
+    float: left;
+  }
+  &__right {
+    float: right;
+  }
+  &__left, &__right {
+    width: 50%;
+    @media #{$tablet-down} {
+      float: none;
+      width: 100%;
+    }
+  }
+}
+
+#about {
+  h2 {
+    margin: 0 0 1rem 0;
+    color: $accentColor;
+  }
+  ul {
+    list-style-position: inside;
+    padding: 0 0 0 0.25rem;
+    margin: 0 0 1rem 0;
+  }
+  li {
+    list-style: none;
+    padding: 0.5rem 0;
+    &:before {
+      content: '-';
+      position: relative;
+      left: -5px;
+    }
+  }
+
+  .card__right {
+    img {
+      width: 100%;
+      height: 500px;
+      object-fit: contain;
+    }
+  }
+}
+
+@keyframes slide {
+  0% {
+    z-index: 1;
+    opacity: 0.5;
+    transform: translateX(-100%);
+  }
+  100% {
+    z-index: 1;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

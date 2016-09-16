@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My homepage</title>
+
+    <link rel="stylesheet" href="./prod/css/main.css">
+</head>
+<body>
+
+<div class="preloader">
+    <h1>loading...</h1>
+</div>
+
+<div class="card-wrapper preload">
+    <nav class="card-wrapper__navigation">
+        <div class="card-wrapper__navigation__item-wrapper">
+            <a href="#about" class="active">
+                <i class="material-icons md-light" aria-hidden="true">account_box</i>about me
+            </a>
+        </div>
+        <div class="card-wrapper__navigation__item-wrapper">
+            <a href="#portfolio">
+                <i class="material-icons md-light" aria-hidden="true">work</i>portfolio
+            </a>
+        </div>
+        <div class="card-wrapper__navigation__item-wrapper">
+            <a href="#contacts">
+                <i class="material-icons md-light" aria-hidden="true">contact_mail</i>contacts
+            </a>
+        </div>
+    </nav>
+
+    <section class="card active" name="about" id="about">
+        <div class="card__content">
+            <div class="card__right">
+                <img src="./prod/media/man.png" alt="me">
+            </div>
+            <div class="card__left">
+                <h2>bio:</h2>
+                <ul>
+                    <li>Stanislav Ivashkevich</li>
+                    <li>Frontend developers since 2012</li>
+                    <li>Minsk, Belarus</li>
+                    <li>Born in 1991</li>
+                </ul>
+                <h2>skills:</h2>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3, less, sasss</li>
+                    <li>Grunt, Gulp, Brunch, npm, bower</li>
+                    <li>Twitter Bootstrap, ZURB Foondation</li>
+                    <li>JavaScript, jQuery, backbone.js</li>
+                    <li>Git, SVN</li>
+                    <li>Windows, Linux</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="card" name="portfolio" id="portfolio">
+        <div class="card__content">
+            <div class="card__left"></div>
+            <div class="card__right"></div>
+        </div>
+    </section>
+    <section class="card" name="contacts" id="contacts">
+        <div class="card__content">
+            <div class="card__left"></div>
+            <div class="card__right"></div>
+        </div>
+    </section>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="./dev/js/index.js"></script>
+</body>
+</html>
