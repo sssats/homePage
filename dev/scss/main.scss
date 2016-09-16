@@ -2,6 +2,7 @@
 @import "normalize";
 @import "layout";
 @import "card";
+@import "cards-content";
 
 html {
   background: $bgColor;
@@ -51,6 +52,10 @@ html {
 
     animation: blink 1.5s ease-out infinite;
   }
+}
+
+img {
+  -webkit-user-drag: none!important;
 }
 
 @keyframes blink {

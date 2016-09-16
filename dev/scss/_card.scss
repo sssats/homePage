@@ -35,7 +35,7 @@
   background: $cardBg;
 
   @media #{$tablet-down} {
-    min-height: 100%;
+    min-height: 600px;
     height: auto;
   }
 
@@ -54,35 +54,6 @@
     @media #{$tablet-down} {
       float: none;
       width: 100%;
-    }
-  }
-}
-
-#about {
-  h2 {
-    margin: 0 0 1rem 0;
-    color: $accentColor;
-  }
-  ul {
-    list-style-position: inside;
-    padding: 0 0 0 0.25rem;
-    margin: 0 0 1rem 0;
-  }
-  li {
-    list-style: none;
-    padding: 0.5rem 0;
-    &:before {
-      content: '-';
-      position: relative;
-      left: -5px;
-    }
-  }
-
-  .card__right {
-    img {
-      width: 100%;
-      height: 500px;
-      object-fit: contain;
     }
   }
 }

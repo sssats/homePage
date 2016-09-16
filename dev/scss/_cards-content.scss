@@ -1,0 +1,92 @@
+.card__right {
+  img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    @media #{$tablet-down} {
+      height: 300px;
+    }
+  }
+}
+
+#about {
+  h2 {
+    margin: 0 0 0.5rem 0;
+    color: $accentColor;
+  }
+  ul {
+    list-style-position: inside;
+    padding: 0 0 0 0.25rem;
+    &:not(:last-of-type) {
+      margin: 0 0 1.5rem 0;
+    }
+  }
+  li {
+    list-style: none;
+    padding: 0.5rem 0;
+
+    font-weight: bold;
+    &:before {
+      content: '-';
+      position: relative;
+      left: -5px;
+    }
+  }
+}
+
+#contacts {
+  .card__right img {
+    @media #{$tablet-down} {
+      transform: rotate(-90deg);
+    }
+  }
+
+  nav a {
+    display: block;
+    text-decoration: none;
+
+    span {
+      display: inline-block;
+      max-width: 100%;
+      overflow: hidden;
+
+      vertical-align: middle;
+
+      font-weight: bold;
+      color: $fontColor;
+      text-overflow: ellipsis;
+
+    }
+  }
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 60px;
+
+    border-radius: 10px;
+  }
+
+  .email svg {
+    fill: #ffbf08;
+  }
+  .linkedin svg {
+    fill: #007bb6;
+  }
+  .google-plus svg {
+    fill: #dd4b39;
+  }
+  .twitter svg {
+    fill: #55acee;
+  }
+  .github svg {
+    fill: #383940;
+  }
+  .vk svg {
+    fill: #4D76A4;
+  }
+  .instagram svg {
+    fill: #383940;
+  }
+
+}
